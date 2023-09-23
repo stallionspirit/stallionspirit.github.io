@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang=en-US>
+<head>
+	<meta charset=UTF-8>
+	<title>AsciiMath FOR ECE 390 PROJECT </title>
+	<script>
+		window.MathJax = {
+				"fast-preview": {
+       					disabled: true
+				},
+				AuthorInit: function() {
+					MathJax.Hub.Register.StartupHook('End', function() {
+						MathJax.Hub.processSectionDelay = 0
+						var demoSource = document.getElementById('demoSource')
+						var demoRendering = document.getElementById('demoRendering')
+						var math = MathJax.Hub.getAllJax('demoRendering')[0]
+						demoSource.addEventListener('input', function() {
+							MathJax.Hub.Queue(['Text', math, demoSource.value])
+						})
+					})
+				}
+			}
+	</script>
+	
+	
+	
+	
+	
+	<script 
+	async  src="https://web.stcloudstate.edu/jmshir/Mathjax-2.6-latest/MathJax.js?config=AM_CHTML-full.js">
+    </script>
+  <!-- A link has to be made to "AM_CHTML-full.js" for MathJax to work.  -->
+  <!-- The "?config=" is telling mathjax to look in the "config" file for "AM_CHTML-full.js" which is stored inside "MathJax-2.6-letest" -->
+  <!-- Everything up to the "?config should be the url to the server where the file MathJax.js is stored.  -->
+
+
+
+
+
+	<!--
+	<script async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML-full">
+	
+	
+	
+File failed to load: https://web.stcloudstate.edu/jmshir/Mathjax-2.6-latest/jax/output/CommonHTML/fonts/TeX/fontdata.js
+Input:
+sum_(i=1)^n i^3=((n(n+1))/2)^2
+Rendering:
+[Math Processing Error]
+
+
+
+-->
+
+
+	<link
+		rel=icon
+		href=img/favicon.ico
+		sizes="16x16 32x32 48x48 64x64 128x128"
+		type=image/x-icon>
+	<link href=http://fonts.googleapis.com/css?family=Quicksand
+			rel=stylesheet type=text/css>
+	<link rel=stylesheet href=css/screen.css>
+	<meta name=viewport
+			content="width=device-width, initial-scale=0.8,
+			minimum-scale=0.8, maximum-scale=10">
+	</head>
+<body>
+
+
+
+
+
+
+<article>
+<section id="about">
+
+
+
+	<!-- <div class="leftColumn"> -->
+		<!-- <label for="demoSource">Input:</label> -->
+		<!-- <br/> -->
+
+		<textarea class="ioArea" id="demoSource">Please type somthing in here: </textarea> 
+		<!-- The "Please type somthing in here:" is the initial value put into the type box -->
+	</div>
+
+	<div class="rightColumn">
+		<label for="demoRendering">Rendering:</label>
+		<br/>
+
+		<div class="ioArea" id="demoRendering">
+			`x^4 +sqrt((x+3)^3)`
+			<!-- The "`x^4 +sqrt((x+3)^3)`" is the initial expression that is rendered." -->
+		</div>
+	</div>
+</section>
+
+
+
+	<ol>
+		
+		
+	</ol>
+</section>
+
+<section id="syntax">
+
+
+
+<table>
+	
+	
+
+	
+
+
+
+</section>
+
+</article>
+</div>
+
+
+</body>
+</html>
